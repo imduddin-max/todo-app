@@ -1,1 +1,1 @@
-Day2 practice branching in github
+practice github on Day2
