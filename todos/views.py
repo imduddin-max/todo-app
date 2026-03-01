@@ -1,4 +1,8 @@
-from django.http import JsonResponse
+from rest_framework import viewsets
+from .models import Todo
+from .serializers import TodoSerializer
 
-def health_check(request):
-    return JsonResponse({"message": "TODO API is running"})
+
+class TodoViewSet(viewsets.ModelViewSet):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
